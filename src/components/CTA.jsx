@@ -20,7 +20,7 @@ export const CTA = () => {
 
   const bgColor = { light: 'tomato', dark: 'orange.300' }
 
-  const color = { light: 'black', dark: 'white' }
+  const color = { light: 'white', dark: 'black' }
   return (
   <Container
     flexDirection="row"
@@ -28,8 +28,7 @@ export const CTA = () => {
     bottom="0"
     width="100%"
     maxWidth="48rem"
-    
-    py={3}
+    py={5}
   >
   <ChakraLink
       flexGrow={2}
@@ -43,8 +42,8 @@ export const CTA = () => {
           </Circle>
         </HStack>
       </PopoverTrigger>
-      <PopoverContent borderColor='orange.300'>
-        <PopoverArrow />
+      <PopoverContent borderColor='orange.300' _active='orange.300' >
+        <PopoverArrow  />
         <PopoverBody>whatkimkong@gmail.com</PopoverBody>
       </PopoverContent>
     </Popover>
@@ -56,7 +55,8 @@ export const CTA = () => {
     <Popover>
       <PopoverTrigger>
         <HStack>
-          <Circle size="40px" bg="tomato" color="white">
+          <Circle size="40px" bg={bgColor[colorMode]}
+      color={color[colorMode]}>
             <PhoneIcon />
           </Circle>
         </HStack>
@@ -73,7 +73,8 @@ export const CTA = () => {
       flexGrow={2}
       mx={2}
     ><HStack>
-        <Circle size="40px" bg="tomato" color="white">
+        <Circle size="40px" bg={bgColor[colorMode]}
+      color={color[colorMode]}>
           <SiGithub />
         </Circle>
       </HStack>
@@ -84,7 +85,8 @@ export const CTA = () => {
       flexGrow={2}
       mx={2}
     ><HStack>
-        <Circle size="40px" bg="tomato" color="white">
+        <Circle size="40px" bg={bgColor[colorMode]}
+      color={color[colorMode]}>
           <FaLinkedinIn />
         </Circle>
       </HStack>
