@@ -1,4 +1,5 @@
-import { Link as ChakraLink, Button } from '@chakra-ui/react'
+import { Link as ChakraLink, Button, HStack, Circle  } from '@chakra-ui/react'
+import { PhoneIcon } from '@chakra-ui/icons'
 
 import { Container } from './Container'
 
@@ -27,5 +28,10 @@ export const CTA = () => (
         View Repo
       </Button>
     </ChakraLink>
+    <HStack>
+      <Circle size='40px' bg='tomato' color='white'>
+       <PhoneIcon />
+      </Circle>
+    </HStack>
   </Container>
 )
