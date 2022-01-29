@@ -4,17 +4,18 @@ import {
   Circle,
   Popover,
   PopoverBody,
-  PopoverHeader,
   PopoverArrow,
   PopoverCloseButton,
   PopoverTrigger,
   PopoverContent,
 } from "@chakra-ui/react";
-import { PhoneIcon, AtSignIcon } from "@chakra-ui/icons";
+import { PhoneIcon, AtSignIcon, CopyIcon } from "@chakra-ui/icons";
 
 import { Container } from "./Container";
 
-export const CTA = () => (
+export function CTA() {
+
+  return (
   <Container
     flexDirection="row"
     position="fixed"
@@ -34,7 +35,6 @@ export const CTA = () => (
       <PopoverContent>
         <PopoverArrow />
         <PopoverCloseButton />
-        <PopoverHeader>Email me at:</PopoverHeader>
         <PopoverBody>whatkimkong@gmail.com</PopoverBody>
       </PopoverContent>
     </Popover>
@@ -52,4 +52,5 @@ export const CTA = () => (
       </HStack>
     </ChakraLink>
   </Container>
-);
+  )
+};

@@ -1,0 +1,13 @@
+######## 1. How to access reactDOM - or navigator to copy text to keyboard?
+
+function copyText() {
+    if (typeof navigator !== 'undefined') {
+      // You now have access
+      navigator.clipboard.writeText("whatkimkong@gmail.com");
+      /* Alert */
+        alert("Copied the text: " + value);
+    }
+  }
+
+-- was trying to callback the function here within the render: 
+  <Popover flexGrow={1} mx={2} onOpen={() => copyText}>
