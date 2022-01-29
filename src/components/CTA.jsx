@@ -34,11 +34,22 @@ export function CTA() {
       </PopoverTrigger>
       <PopoverContent>
         <PopoverArrow />
-        <PopoverCloseButton />
         <PopoverBody>whatkimkong@gmail.com</PopoverBody>
       </PopoverContent>
     </Popover>
-
+    <Popover flexGrow={1} mx={2}>
+      <PopoverTrigger>
+        <HStack>
+          <Circle size="40px" bg="tomato" color="white">
+            <PhoneIcon />
+          </Circle>
+        </HStack>
+      </PopoverTrigger>
+      <PopoverContent>
+        <PopoverArrow />
+        <PopoverBody>+34601904284 [mon-fri 10-6]</PopoverBody>
+      </PopoverContent> 
+    </Popover>
     <ChakraLink
       isExternal
       href="https://github.com/vercel/next.js/blob/canary/examples/with-chakra-ui"
