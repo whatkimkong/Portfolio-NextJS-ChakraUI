@@ -13,6 +13,20 @@ function copyText() {
   <Popover flexGrow={1} mx={2} onOpen={() => copyText}>
 
 
+######## 2. How to change size of Popover Content? 
+
+Tried with the following within the theme extended:
+
+
+components: {
+    Popover: {
+      sizes: {
+        xl: {
+          w: '28px',
+        },
+      },
+    },
+  },
 
 
 params:

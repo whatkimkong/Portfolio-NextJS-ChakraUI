@@ -42,7 +42,7 @@ export const CTA = () => {
           </Circle>
         </HStack>
       </PopoverTrigger>
-      <PopoverContent borderColor={borderColor[colorMode]} >
+      <PopoverContent size='xl' borderColor={borderColor[colorMode]} >
         <PopoverArrow bg={bgColor[colorMode]}/>
         <PopoverBody>whatkimkong@gmail.com</PopoverBody>
       </PopoverContent>
@@ -61,7 +61,7 @@ export const CTA = () => {
           </Circle>
         </HStack>
       </PopoverTrigger>
-      <PopoverContent size="40%" borderColor={borderColor[colorMode]} shadow={'red'}>
+      <PopoverContent size='xl' borderColor={borderColor[colorMode]} shadow={'red'}>
         <PopoverArrow bg={bgColor[colorMode]}/>
         <PopoverBody>+34601904284 [mon-fri 10-6]</PopoverBody>
       </PopoverContent> 
