@@ -19,7 +19,7 @@ export const CTA = () => {
   const { colorMode } = useColorMode()
 
   const bgColor = { light: 'tomato', dark: 'orange.300' }
-
+  const borderColor = { light: 'orange.300', dark: 'orange.800' }
   const color = { light: 'white', dark: 'black' }
   return (
   <Container
@@ -42,7 +42,7 @@ export const CTA = () => {
           </Circle>
         </HStack>
       </PopoverTrigger>
-      <PopoverContent borderColor='orange.300' _active='orange.300' >
+      <PopoverContent borderColor={borderColor[colorMode]} _active='orange.300' >
         <PopoverArrow bg={bgColor[colorMode]}/>
         <PopoverBody>whatkimkong@gmail.com</PopoverBody>
       </PopoverContent>
@@ -61,7 +61,7 @@ export const CTA = () => {
           </Circle>
         </HStack>
       </PopoverTrigger>
-      <PopoverContent>
+      <PopoverContent borderColor={borderColor[colorMode]}>
         <PopoverArrow bg={bgColor[colorMode]}/>
         <PopoverBody>+34601904284 [mon-fri 10-6]</PopoverBody>
       </PopoverContent> 
