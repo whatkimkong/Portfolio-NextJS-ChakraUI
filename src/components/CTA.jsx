@@ -5,18 +5,22 @@ import {
   Popover,
   PopoverBody,
   PopoverArrow,
-  PopoverCloseButton,
   PopoverTrigger,
   PopoverContent,
 } from "@chakra-ui/react";
-import { PhoneIcon, AtSignIcon, CopyIcon } from "@chakra-ui/icons";
-
+import { PhoneIcon, AtSignIcon} from "@chakra-ui/icons";
 import { SiGithub } from "react-icons/si";
-
+import { FaLinkedinIn } from "react-icons/fa";
 import { Container } from "./Container";
+import { useColorMode } from '@chakra-ui/react'
 
-export function CTA() {
 
+export const CTA = () => {
+  const { colorMode } = useColorMode()
+
+  const bgColor = { light: 'tomato', dark: 'orange.300' }
+
+  const color = { light: 'black', dark: 'white' }
   return (
   <Container
     flexDirection="row"
@@ -24,7 +28,8 @@ export function CTA() {
     bottom="0"
     width="100%"
     maxWidth="48rem"
-    py={2}
+    
+    py={3}
   >
   <ChakraLink
       flexGrow={2}
@@ -32,12 +37,13 @@ export function CTA() {
     ><Popover>
       <PopoverTrigger>
         <HStack>
-          <Circle size="40px" bg="tomato" color="white">
-            <AtSignIcon />
+          <Circle size="40px" bg={bgColor[colorMode]}
+      color={color[colorMode]}>
+            <AtSignIcon/>
           </Circle>
         </HStack>
       </PopoverTrigger>
-      <PopoverContent>
+      <PopoverContent borderColor='orange.300'>
         <PopoverArrow />
         <PopoverBody>whatkimkong@gmail.com</PopoverBody>
       </PopoverContent>
@@ -69,6 +75,17 @@ export function CTA() {
     ><HStack>
         <Circle size="40px" bg="tomato" color="white">
           <SiGithub />
+        </Circle>
+      </HStack>
+    </ChakraLink>
+    <ChakraLink
+      isExternal
+      href="https://linkedin.com/whatkimkong"
+      flexGrow={2}
+      mx={2}
+    ><HStack>
+        <Circle size="40px" bg="tomato" color="white">
+          <FaLinkedinIn />
         </Circle>
       </HStack>
     </ChakraLink>
