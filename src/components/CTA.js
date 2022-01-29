@@ -1,7 +1,18 @@
-import { Link as ChakraLink, Button, HStack, Circle  } from '@chakra-ui/react'
-import { PhoneIcon } from '@chakra-ui/icons'
+import {
+  Link as ChakraLink,
+  HStack,
+  Circle,
+  Popover,
+  PopoverBody,
+  PopoverHeader,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverTrigger,
+  PopoverContent,
+} from "@chakra-ui/react";
+import { PhoneIcon, AtSignIcon } from "@chakra-ui/icons";
 
-import { Container } from './Container'
+import { Container } from "./Container";
 
 export const CTA = () => (
   <Container
@@ -12,22 +23,33 @@ export const CTA = () => (
     maxWidth="48rem"
     py={2}
   >
-    <ChakraLink isExternal href="https://chakra-ui.com" flexGrow={1} mx={2}>
-      <Button width="100%" bgGradient="linear(to-tr, teal.300,yellow.400)">
-        chakra-ui
-      </Button>
-    </ChakraLink>
+    <Popover flexGrow={1} mx={2}>
+      <PopoverTrigger>
+        <HStack>
+          <Circle size="40px" bg="tomato" color="white">
+            <AtSignIcon />
+          </Circle>
+        </HStack>
+      </PopoverTrigger>
+      <PopoverContent>
+        <PopoverArrow />
+        <PopoverCloseButton />
+        <PopoverHeader>Email me at:</PopoverHeader>
+        <PopoverBody>whatkimkong@gmail.com</PopoverBody>
+      </PopoverContent>
+    </Popover>
 
     <ChakraLink
       isExternal
       href="https://github.com/vercel/next.js/blob/canary/examples/with-chakra-ui"
       flexGrow={1}
       mx={2}
-    ><HStack>
-      <Circle size='40px' bg='tomato' color='white'>
-       <PhoneIcon />
-      </Circle>
-    </HStack>
+    >
+      <HStack>
+        <Circle size="40px" bg="tomato" color="white">
+          <PhoneIcon />
+        </Circle>
+      </HStack>
     </ChakraLink>
   </Container>
-)
+);
