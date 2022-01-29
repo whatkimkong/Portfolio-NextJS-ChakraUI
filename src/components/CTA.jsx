@@ -11,6 +11,8 @@ import {
 } from "@chakra-ui/react";
 import { PhoneIcon, AtSignIcon, CopyIcon } from "@chakra-ui/icons";
 
+import { SiGithub } from "react-icons/si";
+
 import { Container } from "./Container";
 
 export function CTA() {
@@ -24,7 +26,10 @@ export function CTA() {
     maxWidth="48rem"
     py={2}
   >
-    <Popover flexGrow={1} mx={2}>
+  <ChakraLink
+      flexGrow={2}
+      mx={2}
+    ><Popover>
       <PopoverTrigger>
         <HStack>
           <Circle size="40px" bg="tomato" color="white">
@@ -37,7 +42,12 @@ export function CTA() {
         <PopoverBody>whatkimkong@gmail.com</PopoverBody>
       </PopoverContent>
     </Popover>
-    <Popover flexGrow={1} mx={2}>
+    </ChakraLink>
+    <ChakraLink
+      flexGrow={2}
+      mx={2}
+    >
+    <Popover>
       <PopoverTrigger>
         <HStack>
           <Circle size="40px" bg="tomato" color="white">
@@ -50,15 +60,15 @@ export function CTA() {
         <PopoverBody>+34601904284 [mon-fri 10-6]</PopoverBody>
       </PopoverContent> 
     </Popover>
+    </ChakraLink>
     <ChakraLink
       isExternal
-      href="https://github.com/vercel/next.js/blob/canary/examples/with-chakra-ui"
-      flexGrow={1}
+      href="https://github.com/whatkimkong"
+      flexGrow={2}
       mx={2}
-    >
-      <HStack>
+    ><HStack>
         <Circle size="40px" bg="tomato" color="white">
-          <PhoneIcon />
+          <SiGithub />
         </Circle>
       </HStack>
     </ChakraLink>
