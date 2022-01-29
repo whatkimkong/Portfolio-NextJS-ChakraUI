@@ -21,17 +21,13 @@ export const CTA = () => (
     <ChakraLink
       isExternal
       href="https://github.com/vercel/next.js/blob/canary/examples/with-chakra-ui"
-      flexGrow={3}
+      flexGrow={1}
       mx={2}
-    >
-      <Button width="100%" bgGradient="linear(to-tr, teal.300,yellow.400)">
-        View Repo
-      </Button>
-    </ChakraLink>
-    <HStack>
+    ><HStack>
       <Circle size='40px' bg='tomato' color='white'>
        <PhoneIcon />
       </Circle>
     </HStack>
+    </ChakraLink>
   </Container>
 )
