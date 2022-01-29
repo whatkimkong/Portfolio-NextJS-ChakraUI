@@ -11,3 +11,9 @@ function copyText() {
 
 -- was trying to callback the function here within the render: 
   <Popover flexGrow={1} mx={2} onOpen={() => copyText}>
+
+
+
+
+params:
+  onMouseEnter={setFlag.on} onMouseLeave={setFlag.off}
