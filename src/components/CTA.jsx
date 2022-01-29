@@ -32,12 +32,12 @@ export const CTA = () => {
   >
   <ChakraLink
       flexGrow={2}
-      mx={2}
+      mx={3}
     ><Popover>
       <PopoverTrigger>
         <HStack>
           <Circle size="40px" bg={bgColor[colorMode]}
-      color={color[colorMode]}>
+      color={color[colorMode]} ml='38%'>
             <AtSignIcon/>
           </Circle>
         </HStack>
@@ -56,12 +56,12 @@ export const CTA = () => {
       <PopoverTrigger>
         <HStack>
           <Circle size="40px" bg={bgColor[colorMode]}
-      color={color[colorMode]}>
+      color={color[colorMode]} ml='38%'>
             <PhoneIcon />
           </Circle>
         </HStack>
       </PopoverTrigger>
-      <PopoverContent borderColor={borderColor[colorMode]} shadow={'red'}>
+      <PopoverContent size="40%" borderColor={borderColor[colorMode]} shadow={'red'}>
         <PopoverArrow bg={bgColor[colorMode]}/>
         <PopoverBody>+34601904284 [mon-fri 10-6]</PopoverBody>
       </PopoverContent> 
@@ -74,7 +74,7 @@ export const CTA = () => {
       mx={2}
     ><HStack>
         <Circle size="40px" bg={bgColor[colorMode]}
-      color={color[colorMode]}>
+      color={color[colorMode]} ml='40%'>
           <SiGithub />
         </Circle>
       </HStack>
@@ -86,7 +86,7 @@ export const CTA = () => {
       mx={2}
     ><HStack>
         <Circle size="40px" bg={bgColor[colorMode]}
-      color={color[colorMode]}>
+      color={color[colorMode]} ml='40%'>
           <FaLinkedinIn />
         </Circle>
       </HStack>
