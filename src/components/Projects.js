@@ -22,26 +22,14 @@ export const Projects = ({ title }) => {
   const color = { light: 'tomato', dark: 'orange.300' }
 
   return (
-  <Flex justifyContent="center" alignItems="center" height="100vh">
+  <Flex justifyContent="center" alignItems="center" flexDirection="column" height="50vh">
     <Heading
       fontSize="4vw"
       color={color[colorMode]}
     >
       {title}
     </Heading>
-    <Carousel
-          ssr
-          showDots={false}
-          slidesToSlide={1}
-          infinite
-          containerClass=""
-          itemClass=""
-          deviceType={''}
-        >
-          {images.map((image) => {
-            return <Image key={image} url={image} alt={image} />
-          })}
-    </Carousel>
+    <Image key={images[0]} url={images[0]} alt={images[0]} />
   </Flex>
   )
 }
