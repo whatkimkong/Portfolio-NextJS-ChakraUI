@@ -24,7 +24,7 @@ export const Headline = ({ title, props
       </Heading>
       <Heading fontSize="3vw" color={color[colorMode]}>
         <ChakraLink {...props}
-          href="/project"
+          href="/project/0"
           borderRadius='15px'
           py="2px"
           px="10px"
