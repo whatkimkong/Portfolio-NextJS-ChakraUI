@@ -77,3 +77,36 @@ From Marvin Valke's Github from his portfolio:
       color={color[colorMode]}
     > View Projects</Heading>
     <ChakraLink href="/project">View Projects</ChakraLink>
+
+
+
+
+  
+
+
+    TEMP
+
+    for project PAGE
+    <Main>
+      <Image
+        mt='-90vh'
+        ml='-50vw'
+        borderRadius="full"
+        boxSize="150px"
+        src={CVphoto}
+        alt="Dan Abramov"
+        fallbackSrc="https://via.placeholder.com/150"
+    />
+        <Projects/>
+      </Main>
+
+
+
+
+        if ( id ) {
+    const p = projects[id]
+    console.log('here is p', p)
+    console.log('heres the ID', id)
+  }
+
+  const {title, description, image } = p
