@@ -1,6 +1,6 @@
 import { Flex, Heading, useColorMode } from '@chakra-ui/react'
 
-export const Heading = ({ title }) => {
+export const Headline = ({ title }) => {
   const { colorMode } = useColorMode()
   
   const color = { light: 'tomato', dark: 'orange.300' }
@@ -16,6 +16,6 @@ export const Heading = ({ title }) => {
   )
 }
 
-Heading.defaultProps = {
+Headline.defaultProps = {
   title: 'Portfolio',
 }

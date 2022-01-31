@@ -41,7 +41,7 @@ export const Projects = ({ title }) => {
           {images.map((image) => {
             return <Image key={image} url={image} alt={image} />
           })}
-        </Carousel>
+    </Carousel>
   </Flex>
   )
 }
