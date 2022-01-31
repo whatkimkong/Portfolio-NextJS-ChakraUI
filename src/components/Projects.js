@@ -1,5 +1,6 @@
 import { Flex, Heading, useColorMode } from '@chakra-ui/react';
 import Carousel from 'react-multi-carousel';
+import Image from './Image';
 
 export const Projects = ({ title }) => {
     const images = [
