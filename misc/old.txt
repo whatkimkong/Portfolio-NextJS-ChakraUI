@@ -36,3 +36,44 @@ import { CheckCircleIcon, LinkIcon } from "@chakra-ui/icons";
           </ChakraLink>
         </ListItem>
       </List>
+
+
+
+SSR needed so:
+
+
+ <Carousel
+          ssr
+          showDots={false}
+          slidesToSlide={1}
+          infinite
+          containerClass=""
+          itemClass=""
+          deviceType={''}
+        >
+          {images.map((image) => {
+            return <Image key={image} url={image} alt={image} />
+          })}
+    </Carousel> 
+
+
+
+From Marvin Valke's Github from his portfolio:
+    <a
+          onMouseOver={anim}
+          href={Cv}
+          download="marvin_valke_resume"
+          className="hover"
+        >
+          <li>
+            <i className="fas fa-download"></i>
+          </li>
+        </a>
+
+
+
+
+        <Heading size='2xl'
+      color={color[colorMode]}
+    > View Projects</Heading>
+    <ChakraLink href="/project">View Projects</ChakraLink>

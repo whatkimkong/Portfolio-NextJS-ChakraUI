@@ -15,7 +15,7 @@ const theme = extendTheme({
     black: '#16161D',
   },
   shadows: {
-    outline: '0 0 0 2px yellow',
+    outline: '0 0 0 0px',
   },
   fonts,
   breakpoints,

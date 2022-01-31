@@ -19,7 +19,7 @@ export const CTA = () => {
   const { colorMode } = useColorMode()
   
   const bgColor = { light: 'tomato', dark: 'orange.300' }
-  const borderColor = { light: 'orange.300', dark: 'orange.800' }
+  const borderColor = { light: "gray.300", dark: "gray.700" }
   const color = { light: 'white', dark: 'black' }
   return (
   <Container
