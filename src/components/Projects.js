@@ -3,7 +3,7 @@ import Image from "./Image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-export const Projects = ({ title, description, image, status }) => {
+export const Projects = () => {
   const projects = [
     {
       title: "You're on one already!",
@@ -50,17 +50,12 @@ export const Projects = ({ title, description, image, status }) => {
     },
   ];
 
-
   const router = useRouter();
   const { id } = router.query;
+  const p = projects[id]
 
-  if (id) {
-    const p = projects[id];
-    console.log("here is p", p);
-    console.log("heres the ID", id);
-  }
-
-  const { title, description, image, status } = p;
+  console.log("heres the ID", id);
+  console.log("here is p", p);
 
   const { colorMode } = useColorMode();
   const color = { light: "tomato", dark: "orange.300" };
@@ -72,33 +67,9 @@ export const Projects = ({ title, description, image, status }) => {
       flexDirection="column"
       height="50vh"
       mt="-35vh"
-    >
-      <Heading pb="4vh" fontSize="4vw" color={color[colorMode]}>
-        {title}
-      </Heading>
-      <Flex
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="row"
-        height="50vh"
-        mr="4vw"
-      >
-        <Flex
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="column"
-          height="50vh"
-          mx="4vw"
-        >
-          <Text fontSize="lg" color={color[colorMode]}>
-            {description}
-          </Text>
-          <Text pt="3vh" fontSize="1xl" color={color[colorMode]}>
-            Status: <Code>{status}</Code>
-          </Text>
-        </Flex>
-        <Image key={id} url={image} alt={image} />
-      </Flex>
+    > { !p ? <Text>...isLoading</Text> : (
+    <Text>{p.title}</Text> 
+    )}
     </Flex>
   );
 };
