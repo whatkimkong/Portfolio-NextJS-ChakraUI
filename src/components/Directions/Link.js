@@ -13,8 +13,8 @@ import {
     const bgColor = { light: "#ebedf0", dark: "gray.700" };
 
 
-  const router = useRouter();
-  const { id } = router.query;
+    const router = useRouter();
+    const { id } = router.query;
     
     const href = () => {
       if (direction === 'previous' && id === 0 ) {
