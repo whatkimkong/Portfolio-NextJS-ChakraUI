@@ -103,10 +103,4 @@ From Marvin Valke's Github from his portfolio:
 
 
 
-        if ( id ) {
-    const p = projects[id]
-    console.log('here is p', p)
-    console.log('heres the ID', id)
-  }
-
-  const {title, description, image } = p
+        
