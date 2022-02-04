@@ -1,9 +1,21 @@
 import {
-    Flex,
+    Flex, Heading, Text
   } from "@chakra-ui/react";
   import { Link } from "./Link";
-  
+  import { useRouter } from "next/router";
+
   export const Directions = () => {
+    const router = useRouter();
+    const { id } = router.query;
+    
+    const next = () => {
+      if (id >= 5) {
+        return <Text></Text>;
+      } else if (id < 5) {
+        return <Link title='Next' direction='next'/>
+      }
+    }
+
     return (
       <Flex
         alignItems="center"
@@ -12,7 +24,7 @@ import {
         height="100vh"
         mt='-40vh'
       > <Link title='Previous' direction='previous'/>
-        <Link title='Next' direction='next'/>
+        {next()}
       </Flex>
     );
   };
