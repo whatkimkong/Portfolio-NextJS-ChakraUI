@@ -1,7 +1,6 @@
 import { Flex, Heading, useColorMode, Text, Code } from "@chakra-ui/react";
 import Image from "./Image";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 
 export const Projects = () => {
   const projects = [
@@ -52,7 +51,7 @@ export const Projects = () => {
 
   const router = useRouter();
   const { id } = router.query;
-  const p = projects[id]
+  const p = projects[id];
 
   console.log("heres the ID", id);
   console.log("here is p", p);
@@ -67,9 +66,36 @@ export const Projects = () => {
       flexDirection="column"
       height="50vh"
       mt="-35vh"
-    > { !p ? <Text>...isLoading</Text> : (
-    <Text>{p.title}</Text> 
-    )}
+    > {!p ? <Text>...isLoading</Text> : (
+        <>
+          <Heading pb="4vh" fontSize="4vw" color={color[colorMode]}>
+            {p.title}
+          </Heading>
+          <Flex
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="row"
+            height="50vh"
+            mr="4vw"
+          >
+            <Flex
+              justifyContent="center"
+              alignItems="center"
+              flexDirection="column"
+              height="50vh"
+              mx="4vw"
+            >
+              <Text fontSize="lg" color={color[colorMode]}>
+                {p.description}
+              </Text>
+              <Text pt="3vh" fontSize="1xl" color={color[colorMode]}>
+                Status: <Code>{p.status}</Code>
+              </Text>
+            </Flex>
+            <Image key={id} url={p.image} alt={p.image} />
+          </Flex>
+        </>
+      )}
     </Flex>
   );
 };
