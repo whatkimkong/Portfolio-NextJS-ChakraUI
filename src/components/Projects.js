@@ -1,6 +1,7 @@
-import { Flex, Heading, useColorMode, Text, Code } from "@chakra-ui/react";
+import { Flex, Heading, useColorMode, Text, Code, Link as ChakraLink, HStack, Circle } from "@chakra-ui/react";
 import Image from "./Image";
 import { useRouter } from "next/router";
+import { SiGithub } from "react-icons/si";
 
 export const Projects = () => {
   const projects = [
@@ -16,7 +17,7 @@ export const Projects = () => {
     },
     {
       title: "Howdiy",
-      description: "hey why cant I see this",
+      description: "A community-building app surrounding natural DIY recipes, pair-programmed and conceptualised by myself and @emballeur",
       status: "pre-launch",
       serverUrl: "https://github.com/emballeur/howdiy-server",
       clientUrl: "https://github.com/emballeur/howdiy-client",
@@ -68,7 +69,8 @@ export const Projects = () => {
 
   const { colorMode } = useColorMode();
   const color = { light: "tomato", dark: "orange.300" };
-
+  const bgColor = { light: 'tomato', dark: 'orange.300' }
+  const iconColor = { light: 'white', dark: 'black' }
   return (
     <Flex
       justifyContent="center"
@@ -101,6 +103,36 @@ export const Projects = () => {
               <Text pt="3vh" fontSize="1xl" color={color[colorMode]}>
                 Status: <Code>{p.status}</Code>
               </Text>
+              { p.serverUrl ? <Text color={color[colorMode]}>Server</Text> : null}
+              { p.serverUrl ? (
+                <ChakraLink 
+      isExternal
+      href={p.serverUrl}
+      flexGrow={2}
+      mx={2}
+    ><HStack>
+        <Circle size="40px" bg={bgColor[colorMode]}
+      color={iconColor[colorMode]} ml='40%'>
+          <SiGithub />
+        </Circle>
+      </HStack>
+    </ChakraLink>
+              ) : null }
+              { p.clientUrl ? <Text color={color[colorMode]}>Client</Text> : null}
+              { p.clientUrl ? (
+                <ChakraLink 
+      isExternal
+      href={p.clientUrl}
+      flexGrow={2}
+      mx={2}
+    ><HStack>
+        <Circle size="40px" bg={bgColor[colorMode]}
+      color={iconColor[colorMode]} ml='40%'>
+          <SiGithub />
+        </Circle>
+      </HStack>
+    </ChakraLink>
+              ) : null}
             </Flex>
             <Image key={id} url={p.image} alt={p.image} />
           </Flex>
