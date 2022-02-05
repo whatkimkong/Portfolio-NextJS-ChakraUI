@@ -9,6 +9,8 @@ export const Projects = () => {
       description:
         "Portfolio showcasing the behind the scene builds and the variety of designs",
       status: "pre-launch",
+      serverUrl: "",
+      clientUrl: "",
       image:
         "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     },
@@ -16,6 +18,8 @@ export const Projects = () => {
       title: "Howdiy",
       description: "hey why cant I see this",
       status: "pre-launch",
+      serverUrl: "https://github.com/emballeur/howdiy-server",
+      clientUrl: "https://github.com/emballeur/howdiy-client",
       image:
         "https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
     },
@@ -23,6 +27,8 @@ export const Projects = () => {
       title: "KanKan",
       description: "",
       status: "pre-launch",
+      serverUrl: "",
+      clientUrl: "",
       image:
         "https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     },
@@ -37,6 +43,8 @@ export const Projects = () => {
       title: "Empress Voroti",
       description: "",
       status: "pre-launch",
+      serverUrl: "",
+      clientUrl: "",
       image:
         "https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     },
@@ -44,6 +52,8 @@ export const Projects = () => {
       title: "Devotox",
       description: "",
       status: "launched",
+      serverUrl: "",
+      clientUrl: "",
       image:
         "https://images.unsplash.com/photo-1550223640-23097fc71cb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     },
