@@ -1,7 +1,8 @@
-import { Flex, Heading, useColorMode, Text, Code, Link as ChakraLink, HStack, Circle } from "@chakra-ui/react";
+import { Flex, Heading, useColorMode, Text, Code, Link as ChakraLink, HStack, Circle, FormControl, FormLabel, useBoolean, Button} from "@chakra-ui/react";
 import Image from "./Image";
 import { useRouter } from "next/router";
 import { SiGithub } from "react-icons/si";
+import { Switch } from '@chakra-ui/react';
 
 export const Projects = () => {
   const projects = [
@@ -21,6 +22,7 @@ export const Projects = () => {
       status: "pre-launch",
       serverUrl: "https://github.com/emballeur/howdiy-server",
       clientUrl: "https://github.com/emballeur/howdiy-client",
+      githubImage: "https://images.unsplash.com/photo-1550223640-23097fc71cb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       image:
         "https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
     },
@@ -59,7 +61,8 @@ export const Projects = () => {
         "https://images.unsplash.com/photo-1550223640-23097fc71cb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     },
   ];
-
+  
+  const [flag, setFlag] = useBoolean()
   const router = useRouter();
   const { id } = router.query;
   const p = projects[id];
@@ -134,7 +137,13 @@ export const Projects = () => {
     </ChakraLink>
               ) : null}
             </Flex>
-            <Image key={id} url={p.image} alt={p.image} />
+            <FormControl display='flex' alignItems='center'>
+  <FormLabel htmlFor='github-toggle' mb='0'>
+    View Github Preview
+  </FormLabel>
+  <Switch id='github-toggle' onChange={setFlag.toggle}/>
+</FormControl>
+            { flag === true ? <Image key={id} url={p.githubImage} alt={p.githubImage} /> : <Image key={id} url={p.image} alt={p.image} />}
           </Flex>
         </>
       )}
