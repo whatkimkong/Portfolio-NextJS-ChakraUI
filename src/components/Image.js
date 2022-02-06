@@ -2,7 +2,7 @@
 const Image = ({ url, alt }) => (
     <img
       draggable={false}
-      style={{ width: '65%', position: 'relative' }}
+      style={{ width: '45%', position: 'relative' }}
       src={url}
       alt={alt}
     />
