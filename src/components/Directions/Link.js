@@ -15,11 +15,12 @@ import {
 
     const router = useRouter();
     const { id } = router.query;
+    console.log(id)
     
     const href = () => {
-      if (direction === 'previous' && id === 0 ) {
-        return "/"
-      } else if (direction === 'previous') {
+      if (id === 0 && direction === 'previous') {
+        return `/`
+      } else if ( id !== 0 && direction === 'previous') {
         return `/project/${Number(id)-1}`
       } else if (direction === 'next') {
         return `/project/${Number(id)+1}`
