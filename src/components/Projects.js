@@ -10,13 +10,15 @@ import {
   FormControl,
   FormLabel,
   useBoolean,
-  Button,
-  useBreakpointValue, Wrap, WrapItem
+  Wrap, WrapItem
 } from "@chakra-ui/react";
 import Image from "./Image";
 import { useRouter } from "next/router";
 import { SiGithub } from "react-icons/si";
+import { SpinnerIcon } from '@chakra-ui/icons';
 import { Switch } from "@chakra-ui/react";
+import { ImSpinner3 } from "react-icons/im";
+import { Spinner } from "@chakra-ui/spinner"
 
 export const Projects = () => {
   const projects = [
@@ -105,13 +107,13 @@ export const Projects = () => {
       mt="-35vh"
     >
       {!p ? (
-        <Text> ...isLoading </Text>
+        <Spinner speed='0.8s' color={color[colorMode]} size="xl"/>
       ) : (
         <>
           <Heading pb="4vh" fontSize="4vw" color={color[colorMode]}>
             {p.title}
           </Heading>
-          <Wrap spacing='30px' justify='center' >
+          <Wrap spacing='30px' justify='center'>
           <WrapItem width='30vw'>
             <Flex
               justifyContent="center"
