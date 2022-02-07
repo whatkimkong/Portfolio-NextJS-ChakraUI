@@ -128,6 +128,12 @@ export const Projects = () => {
               <Text pt="3vh" fontSize="1xl" color={color[colorMode]}>
                 Status: <Code> {p.status} </Code>
               </Text>
+              <FormControl display="flex" alignItems="center" justifyContent="center" mt="2vh">
+              <FormLabel htmlFor="github-toggle" mb="0" color={color[colorMode]}>
+                preview code
+              </FormLabel>
+              <Switch id="github-toggle" onChange={setFlag.toggle} />
+              </FormControl>
               <Flex
               justifyContent="center"
               alignItems="center"
@@ -167,13 +173,8 @@ export const Projects = () => {
                 </ChakraLink>
               ) : null}
               </Flex>
+              
             </Flex>
-            <FormControl display="flex" alignItems="center">
-              <FormLabel htmlFor="github-toggle" mb="0">
-                View Github Preview
-              </FormLabel>
-              <Switch id="github-toggle" onChange={setFlag.toggle} />
-            </FormControl>
             {flag === true ? (
               <Image key={id} url={p.githubImage} alt={p.githubImage} />
             ) : (
