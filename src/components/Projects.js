@@ -11,6 +11,7 @@ import {
   FormLabel,
   useBoolean,
   Button,
+  useBreakpointValue, Wrap, WrapItem
 } from "@chakra-ui/react";
 import Image from "./Image";
 import { useRouter } from "next/router";
@@ -110,26 +111,22 @@ export const Projects = () => {
           <Heading pb="4vh" fontSize="4vw" color={color[colorMode]}>
             {p.title}
           </Heading>
-          <Flex
-            justifyContent="center"
-            alignItems="center"
-            flexDirection="row"
-            height="50vh"
-            mr="4vw">
+          <Wrap spacing='30px' justify='center' >
+          <WrapItem width='30vw'>
             <Flex
               justifyContent="center"
               alignItems="center"
               flexDirection="column"
               height="50vh"
-              mx="4vw">
-              <Text fontSize="lg" color={color[colorMode]}>
+              ml="4vw">
+              <Text fontSize="2vh" color={color[colorMode]}>
                 {p.description}
               </Text>
-              <Text pt="3vh" fontSize="1xl" color={color[colorMode]}>
+              <Text pt="3vh" fontSize="2vh" color={color[colorMode]}>
                 Status: <Code> {p.status} </Code>
               </Text>
               <FormControl display="flex" alignItems="center" justifyContent="center" mt="2vh">
-              <FormLabel htmlFor="github-toggle" mb="0" color={color[colorMode]}>
+              <FormLabel htmlFor="github-toggle" mb="0" color={color[colorMode]} fontSize="2vh">
                 preview code
               </FormLabel>
               <Switch id="github-toggle" onChange={setFlag.toggle} />
@@ -173,16 +170,26 @@ export const Projects = () => {
                 </ChakraLink>
               ) : null}
               </Flex>
-              
             </Flex>
+            </WrapItem>
+            <WrapItem width='50vw' justify='center'>
             {flag === true ? (
               <Image key={id} url={p.githubImage} alt={p.githubImage} />
             ) : (
               <Image key={id} url={p.image} alt={p.image} />
             )}
-          </Flex>
+            </WrapItem>
+          </Wrap>
         </>
       )}
     </Flex>
   );
 };
+
+
+// Flex
+// justifyContent="center"
+//             alignItems="center"
+//             flexDirection="row"
+//             height="50vh"
+//             mr="4vw">
