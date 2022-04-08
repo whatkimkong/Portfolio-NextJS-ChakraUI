@@ -8,21 +8,17 @@ import {
   
   export const Link = ({ title, direction}) => {
     const { colorMode } = useColorMode();
-  
     const color = { light: "tomato", dark: "orange.300" };
     const bgColor = { light: "#ebedf0", dark: "gray.700" };
-
 
     const router = useRouter();
     const { id } = router.query;
     console.log(id)
     
     const href = () => {
-      if (id === 0 && direction === 'previous') {
-        return `/`
-      } else if ( id !== 0 && direction === 'previous') {
+      if (id > 0 && id < 6 && direction === 'previous') {
         return `/project/${Number(id)-1}`
-      } else if (direction === 'next') {
+      } else if (id >= 0 && id < 5 && direction === 'next') {
         return `/project/${Number(id)+1}`
       }
     } 
@@ -57,6 +53,6 @@ import {
   };
   
   Link.defaultProps = {
-    title: "next",
+    title: "Next",
     direction: 'next'
   };
