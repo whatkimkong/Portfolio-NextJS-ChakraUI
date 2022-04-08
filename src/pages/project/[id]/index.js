@@ -7,7 +7,6 @@ import {
   import { CTA } from "../../../components/CTA";
   import { Directions } from "../../../components/Directions";
   import { Projects } from "../../../components/Projects";
-  import CVphoto from "../../../../public/images/CVphoto.png";
   // import Link from 'next/link';
   
   const Project = () => (
