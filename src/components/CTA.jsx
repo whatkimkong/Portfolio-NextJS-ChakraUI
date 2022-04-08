@@ -10,9 +10,11 @@ import {
 } from "@chakra-ui/react";
 import { PhoneIcon, AtSignIcon} from "@chakra-ui/icons";
 import { SiGithub } from "react-icons/si";
+import { FiHome } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Container } from "./Container";
 import { useColorMode } from '@chakra-ui/react'
+
 
 
 export const CTA = () => {
@@ -30,6 +32,17 @@ export const CTA = () => {
     maxWidth="48rem"
     py={5}
   >
+  <ChakraLink
+      href="/"
+      flexGrow={2}
+      mx={2}
+    ><HStack>
+        <Circle size="40px" bg={bgColor[colorMode]}
+      color={color[colorMode]} ml='40%'>
+          <FiHome size="18px"/>
+        </Circle>
+      </HStack>
+    </ChakraLink>
   <ChakraLink
       flexGrow={2}
       mx={3}
