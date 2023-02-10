@@ -8,23 +8,22 @@ import {
     
     const router = useRouter();
     const { id } = router.query;
-    console.log(id)
 
     const next = () => {
-          if (id === 5) {
-            return <Text></Text>;
-          } else if (id < 5) {
-            return <Link title='Next' direction='next'/>
-           }
-        }
+      if (id === 5) {
+        return <Text></Text>;
+      } else if (id < 5) {
+        return <Link title='Next' direction='next'/>
+      }
+    }
 
-        const prev = () => {
-          if (id === 0) {
-            return <Text></Text>;
-          } else if (id <= 5 && id > 0) {
-              return <Link title='Previous' direction='previous'/>
-           }
-        }
+    const prev = () => {
+      if (id <= 5 && id > 0) {
+        return <Link title='Previous' direction='previous'/>
+      } else {
+        return <Link title='Home' direction='home'/>
+      }
+    }
 
     return (
       <Flex

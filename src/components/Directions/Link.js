@@ -13,10 +13,11 @@ import {
 
     const router = useRouter();
     const { id } = router.query;
-    console.log(id)
     
     const href = () => {
-      if (id > 0 && id < 6 && direction === 'previous') {
+      if (id === 0 && direction === 'home') {
+        return `/project/${Number(id)-1}`
+      } else if (id > 0 && id < 6 && direction === 'previous') {
         return `/project/${Number(id)-1}`
       } else if (id >= 0 && id < 5 && direction === 'next') {
         return `/project/${Number(id)+1}`
@@ -45,7 +46,7 @@ import {
                 "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
               }}
             textDecoration="none"
-          > {direction === 'previous' && <ArrowBackIcon/>} {title} {direction === 'next' && <ArrowForwardIcon/>}
+          > {direction !== 'next' && <ArrowBackIcon/>} {title} {direction === 'next' && <ArrowForwardIcon/>}
           </ChakraLink>
         </Heading>
       </>
