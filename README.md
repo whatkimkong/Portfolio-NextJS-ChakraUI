@@ -8,6 +8,11 @@ Enjoy! :)
 >> Follow my Github: https://github.com/whatkimkong
 >> Connect with me on LinkedIn: https://linkedin.com/whatkimkong
 
+# Setup Locally
+- After cloning install dependencies with `npm i`
+- Run `npm run dev`
+- App will be visible on url: http://localhost:3000
+
 
 # Create NextJS App with Chakra-UI:
 
