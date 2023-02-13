@@ -15,9 +15,7 @@ import {
 import Image from "./Image";
 import { useRouter } from "next/router";
 import { SiGithub } from "react-icons/si";
-import { SpinnerIcon } from '@chakra-ui/icons';
 import { Switch } from "@chakra-ui/react";
-import { ImSpinner3 } from "react-icons/im";
 import { Spinner } from "@chakra-ui/spinner"
 
 export const Projects = () => {

@@ -15,6 +15,7 @@ const Index = () => {
         ml='-50vw'
         borderRadius="full"
         boxSize="200px"
+        loading="eager"
         src="/CVphotoPink.jpeg"
         alt="Dan Abramov"
         fallbackSrc="https://via.placeholder.com/150"
