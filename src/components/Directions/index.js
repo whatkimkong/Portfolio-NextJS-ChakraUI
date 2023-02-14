@@ -18,10 +18,10 @@ import {
     }
 
     const prev = () => {
-      if (id <= 5 && id > 0) {
+      if (id === 0) {
+        return <Text></Text>;
+      } else if (id <= 5 && id > 0) {
         return <Link title='Previous' direction='previous'/>
-      } else {
-        return <Link title='Home' direction='home'/>
       }
     }
 
