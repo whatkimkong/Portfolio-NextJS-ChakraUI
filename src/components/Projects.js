@@ -101,9 +101,8 @@ export const Projects = () => {
               ) : null}
               {p.clientUrl ? (
                 <Text color={color[colorMode]}> Client </Text>
-              ) : null}
-              {p.clientUrl ? (
-                <ChakraLink isExternal href={p.clientUrl} flexGrow={2} mx={2}>
+              ) : <Text color={color[colorMode]}> Source Code </Text>}
+                <ChakraLink isExternal href={p.clientUrl ?? p.repoUrl} flexGrow={2} mx={2}>
                   <HStack>
                     <Circle
                       size="40px"
@@ -114,7 +113,6 @@ export const Projects = () => {
                     </Circle>
                   </HStack>
                 </ChakraLink>
-              ) : null}
               </Flex>
             </Flex>
             </WrapItem>
