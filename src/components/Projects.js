@@ -17,8 +17,8 @@ import { useRouter } from "next/router";
 import { SiGithub } from "react-icons/si";
 import { Switch } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/spinner"
-import { Repos } from "./Repos";
-import { NoCodeJS } from "./NoCodeJS";
+import { Repos } from "./Repos.ts";
+import { NoCodeJS } from "./NoCodeJS.ts";
 
 export const Projects = () => {
   
