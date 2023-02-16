@@ -1,4 +1,3 @@
-
 const Image = ({ url, alt }) => (
     <img
       draggable={false}
@@ -6,6 +5,6 @@ const Image = ({ url, alt }) => (
       src={url}
       alt={alt}
     />
-  )
+)
   
-export default Image  
+export default Image

@@ -14,8 +14,7 @@ export const Repos: Repos[] = [
           title: "You're on one already! Yes! Tis' Kim's Portfolio",
           description: "My Portfolio showcasing the behind the scene builds and the variety of designs, welcome to gander",
           status: "pre-launch",
-          serverUrl: "",
-          clientUrl: "",
+          repoUrl: "https://github.com/whatkimkong/Portfolio-NextJS-ChakraUI",
           image:
             "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
         },
