@@ -34,7 +34,7 @@ export const Repos: Repos[] = [
           title: "KanKan",
           description: "",
           status: "pre-launch",
-          repoUrl: "",
+          repoUrl: "https://github.com/whatkimkong/Kankan",
           image:
             "https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
         },
@@ -42,8 +42,7 @@ export const Repos: Repos[] = [
           title: "Haiku",
           description: "",
           status: "pre-launch",
-          serverUrl: "",
-          clientUrl: "",
+          repoUrl: "https://github.com/whatkimkong/Haiku_Life_Design",
           image:
             "https://images.unsplash.com/photo-1550167164-1b67c2be3973?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
         },
@@ -51,7 +50,7 @@ export const Repos: Repos[] = [
           title: "Empress Voroti",
           description: "",
           status: "pre-launch",
-          repoUrl: "",
+          repoUrl: "https://github.com/whatkimkong/Empress-Voroti",
           image:
             "https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
         }
