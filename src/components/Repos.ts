@@ -1,4 +1,4 @@
-import * as images from '../../public/index';
+import * as images from '../../public/index.js';
 
 interface Repos {
     title: string;
@@ -20,7 +20,7 @@ export const Repos: Repos[] = [
           repoUrl: "https://github.com/whatkimkong/Portfolio-NextJS-ChakraUI",
           image: images.portfolioLightmode,
           imageDark: images.portfolioDarkmode,
-          githubImage: images.portfolioDarkmode,
+          githubImage: images.portfolioLightmode,
         },
         {
           title: "Howdiy",

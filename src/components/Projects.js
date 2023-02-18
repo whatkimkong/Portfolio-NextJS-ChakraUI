@@ -19,6 +19,7 @@ import { Switch } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/spinner"
 import { Repos } from "./Repos.ts";
 import { NoCodeJS } from "./NoCodeJS.ts";
+import Embed from "../Embed";
 
 export const Projects = () => {
   
@@ -118,9 +119,9 @@ export const Projects = () => {
             </WrapItem>
             <WrapItem width='50vw' justify='center'>
             {flag === true ? (
-              <Image key={id} url={p.githubImage} alt={p.githubImage} />
+              <Embed key={id} url={p.githubImage} alt={p.githubImage} />
             ) : (
-              <Image key={id} url={p.image} alt={p.image} />
+              <Embed key={id} url={p.image} alt={p.image} />
             )}
             </WrapItem>
           </Wrap>
