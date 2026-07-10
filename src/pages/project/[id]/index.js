@@ -7,15 +7,16 @@ import {
   import { CTA } from "../../../components/CTA";
   import { Directions } from "../../../components/Directions";
   import { Projects } from "../../../components/Projects";
-  // import Link from 'next/link';
   
-  const Project = () => (
-    <Container height="100vh">
-      <Directions direction='Next'/>
-      <Projects/>
-      <DarkModeSwitch />
-      <CTA />
-    </Container>
-  );
+  const Project = () => {
+    return (
+      <Container height="100vh">
+        <Directions direction='Next'/>
+        <Projects/>
+        <DarkModeSwitch />
+        <CTA />
+      </Container>
+    )
+  };
   
   export default Project;

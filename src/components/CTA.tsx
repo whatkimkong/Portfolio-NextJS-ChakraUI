@@ -14,15 +14,15 @@ import { FiHome } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Container } from "./Container";
 import { useColorMode } from '@chakra-ui/react'
-
-
+import { Color } from "../types";
 
 export const CTA = () => {
   const { colorMode } = useColorMode()
   
-  const bgColor = { light: 'tomato', dark: 'orange.300' }
-  const borderColor = { light: "gray.300", dark: "gray.700" }
-  const color = { light: 'white', dark: 'black' }
+  const bgColor: Color = { light: 'tomato', dark: 'orange.300' }
+  const borderColor: Color = { light: "gray.300", dark: "gray.700" }
+  const color: Color = { light: 'white', dark: 'black' }
+  
   return (
   <Container
     flexDirection="row"
@@ -55,7 +55,7 @@ export const CTA = () => {
           </Circle>
         </HStack>
       </PopoverTrigger>
-      <PopoverContent size='xl' borderColor={borderColor[colorMode]} >
+      <PopoverContent borderColor={borderColor[colorMode]}>
         <PopoverArrow bg={bgColor[colorMode]}/>
         <PopoverBody>whatkimkong@gmail.com</PopoverBody>
       </PopoverContent>
@@ -74,7 +74,7 @@ export const CTA = () => {
           </Circle>
         </HStack>
       </PopoverTrigger>
-      <PopoverContent size='xl' borderColor={borderColor[colorMode]} shadow={'red'}>
+      <PopoverContent minW="xl" borderColor={borderColor[colorMode]} shadow={'red'}>
         <PopoverArrow bg={bgColor[colorMode]}/>
         <PopoverBody>+34601904284 [mon-fri 10-6]</PopoverBody>
       </PopoverContent> 
