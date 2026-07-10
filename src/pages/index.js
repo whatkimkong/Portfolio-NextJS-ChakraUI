@@ -9,7 +9,7 @@ import { CTA } from "../components/CTA";
 const Index = () => {
   return (
   <Container height="100vh">
-    <Headline />
+    <Headline title="Welcome!">View Projects</Headline>
     <Image
         mt='-90vh'
         ml='-50vw'
@@ -17,7 +17,7 @@ const Index = () => {
         boxSize="200px"
         loading="eager"
         src="/CVphotoPink.jpeg"
-        alt="Dan Abramov"
+        alt="CV photo"
         fallbackSrc="https://via.placeholder.com/150"
     />
     <DarkModeSwitch />
