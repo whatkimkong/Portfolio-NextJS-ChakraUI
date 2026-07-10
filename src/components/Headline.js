@@ -6,12 +6,12 @@ import {
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
-export const Headline = ({ title, props
+export const Headline = ({ title, children, ...props
  }) => {
   const { colorMode } = useColorMode();
-
   const color = { light: "tomato", dark: "orange.300" };
   const bgColor = { light: "#ebedf0", dark: "gray.700" };
+
   return (
     <Flex
       alignItems="center"
@@ -30,13 +30,9 @@ export const Headline = ({ title, props
           px="10px"
           _hover={{ bg: bgColor[colorMode], transform: "scale(0.98)" }}
         >
-          View Projects <ArrowForwardIcon />
+          {children}<ArrowForwardIcon />
         </ChakraLink>
       </Heading>
     </Flex>
   );
-};
-
-Headline.defaultProps = {
-  title: "Portfolio",
 };

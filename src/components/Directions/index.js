@@ -4,7 +4,7 @@ import {
 import { Link } from "./Link";
 import { useRouter } from "next/router";
 
-export const Directions = () => {
+export const Directions = ({direction}) => {
   
   const router = useRouter();
   const { id } = router.query;
@@ -13,7 +13,7 @@ export const Directions = () => {
     if (id === 5) {
       return <Text></Text>;
     } else if (id < 5) {
-      return <Link title='Next' direction='next'/>
+      return <Link title={direction} direction={direction}/>
     }
   }
 
@@ -21,7 +21,7 @@ export const Directions = () => {
     if (id === 0) {
       return <Text></Text>;
     } else if (id <= 5 && id > 0) {
-      return <Link title='Previous' direction='previous'/>
+      return <Link title='Previous' direction='Previous'/>
     }
   }
 
@@ -35,9 +35,4 @@ export const Directions = () => {
     > {prev()}{next()}
     </Flex>
   );
-};
-
-Directions.defaultProps = {
-  title: "Next",
-  direction: "next",
 };

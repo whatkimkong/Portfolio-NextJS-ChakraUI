@@ -11,7 +11,7 @@ import {
   
   const Project = () => (
     <Container height="100vh">
-      <Directions />
+      <Directions direction='Next'/>
       <Projects/>
       <DarkModeSwitch />
       <CTA />

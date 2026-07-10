@@ -17,9 +17,9 @@ export const Link = ({ title, direction}) => {
   const href = () => {
     if (id === 0 && direction === 'home') {
       return `/project/${Number(id)-1}`
-    } else if (id > 0 && id < 6 && direction === 'previous') {
+    } else if (id > 0 && id < 6 && direction === 'Previous') {
       return `/project/${Number(id)-1}`
-    } else if (id >= 0 && id < 5 && direction === 'next') {
+    } else if (id >= 0 && id < 5 && direction === 'Next') {
       return `/project/${Number(id)+1}`
     }
   } 
@@ -46,14 +46,9 @@ export const Link = ({ title, direction}) => {
               "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
             }}
           textDecoration="none"
-        > {direction !== 'next' && <ArrowBackIcon/>} {title} {direction === 'next' && <ArrowForwardIcon/>}
+        > {direction !== 'Next' && <ArrowBackIcon/>} {title} {direction === 'Next' && <ArrowForwardIcon/>}
         </ChakraLink>
       </Heading>
     </>
   );
-};
-  
-Link.defaultProps = {
-  title: "Next",
-  direction: 'next'
 };
