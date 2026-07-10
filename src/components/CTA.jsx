@@ -94,7 +94,7 @@ export const CTA = () => {
     </ChakraLink>
     <ChakraLink
       isExternal
-      href="https://linkedin.com/whatkimkong"
+      href="https://linkedin.com/in/kim-lyons-hernandez/"
       flexGrow={2}
       mx={2}
     ><HStack>
