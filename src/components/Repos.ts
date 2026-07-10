@@ -1,18 +1,7 @@
 import * as images from '../../public/index.js';
+import { Project } from './Projects';
 
-interface Repos {
-    title: string;
-    description: string;
-    status: string;
-    serverUrl?: string;
-    clientUrl?: string;
-    repoUrl?: string;
-    image: Object;
-    imageDark?: Object;
-    githubImage?: Object;
-}
-
-export const Repos: Repos[] = [
+export const Repos: Project[] = [
         {
           title: "You're on one already! My Portfolio",
           description: "My Portfolio showcasing the behind the scene builds and the variety of designs, welcome to gander",

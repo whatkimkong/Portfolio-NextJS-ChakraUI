@@ -9,37 +9,50 @@ import {
   Circle,
   FormControl,
   FormLabel,
+  Switch,
+  Spinner,
   useBoolean,
-  Wrap, WrapItem
+  Wrap,
+  WrapItem
 } from "@chakra-ui/react";
-import Image from "./Image";
 import { useRouter } from "next/router";
 import { SiGithub } from "react-icons/si";
-import { Switch } from "@chakra-ui/react";
-import { Spinner } from "@chakra-ui/spinner"
-import { Repos } from "./Repos.ts";
-import { NoCodeJS } from "./NoCodeJS.ts";
-import Embed from "../Embed";
+import { Repos } from "./Repos";
+import { NoCodeJS } from "./NoCodeJS";
+import Embed from "../Embed.js";
+import { Color } from "../types.js";
+
+export interface Project {
+    title: string;
+    description: string;
+    status: string;
+    serverUrl?: string;
+    clientUrl?: string;
+    repoUrl?: string;
+    image: Object;
+    imageDark?: Object;
+    githubImage?: Object;
+}
 
 export const Projects = () => {
   
-  const projects = [...Repos, ...NoCodeJS];
+  const projects: Project[] = [...Repos, ...NoCodeJS];
 
   const [flag, setFlag] = useBoolean();
   const router = useRouter();
-  const { id } = router.query;
-  const p = projects[id];
+  const id = Number(router.query.id!);
+  const p: Project = projects[id];
 
   const { colorMode } = useColorMode();
-  const color = {
+  const color: Color = {
     light: "tomato",
     dark: "orange.300",
   };
-  const bgColor = {
+  const bgColor: Color = {
     light: "red.600",
     dark: "orange.800",
   };
-  const iconColor = {
+  const iconColor: Color = {
     light: "white",
     dark: "black",
   };
@@ -117,7 +130,7 @@ export const Projects = () => {
               </Flex>
             </Flex>
             </WrapItem>
-            <WrapItem width='50vw' justify='center'>
+            <WrapItem width='50vw' display='flex' justifyContent='center'>
             {flag === true ? (
               <Embed key={id} url={p.githubImage} alt={p.githubImage} />
             ) : (
@@ -130,10 +143,3 @@ export const Projects = () => {
     </Flex>
   );
 };
-
-// Flex
-// justifyContent="center"
-//  alignItems="center"
-//  flexDirection="row"
-//  height="50vh"
-//  mr="4vw">

@@ -2,15 +2,22 @@ import {
   Flex,
   Heading,
   useColorMode,
-  Link as ChakraLink
+  Link as ChakraLink,
+  LinkProps,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { Color } from "../types";
 
-export const Headline = ({ title, children, ...props
- }) => {
+type HeadlineProps = LinkProps & {
+  title: string;
+  children: React.ReactNode;
+};
+
+export const Headline = ({ title, children, ...props}: HeadlineProps) => {
   const { colorMode } = useColorMode();
-  const color = { light: "tomato", dark: "orange.300" };
-  const bgColor = { light: "#ebedf0", dark: "gray.700" };
+  
+  const color: Color = { light: "tomato", dark: "orange.300" };
+  const bgColor: Color = { light: "#ebedf0", dark: "gray.700" };
 
   return (
     <Flex
