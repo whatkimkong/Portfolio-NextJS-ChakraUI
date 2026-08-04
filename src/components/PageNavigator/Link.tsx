@@ -5,15 +5,17 @@ import {
   } from "@chakra-ui/react";
 import { ArrowForwardIcon, ArrowBackIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
+import { Color } from "../../types";
   
-export const Link = ({ title, direction}) => {
+export const Link = ({ title, direction }: { title: string; direction: string }) => {
   const { colorMode } = useColorMode();
-  const color = { light: "tomato", dark: "orange.300" };
-  const bgColor = { light: "#ebedf0", dark: "gray.700" };
+  const color: Color = { light: "tomato", dark: "orange.300" };
+  const bgColor: Color = { light: "#ebedf0", dark: "gray.700" };
 
   const router = useRouter();
-  const { id } = router.query;
+  const id = Number(router.query.id!);
   
+  // Refactor idea:can I use router.replace to change the id + 1 and navigate to the next page as such?
   const href = () => {
     if (id === 0 && direction === 'home') {
       return `/project/${Number(id)-1}`

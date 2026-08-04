@@ -5,13 +5,13 @@ import {
   import { Main } from "../../../components/Main";
   import { DarkModeSwitch } from "../../../components/DarkModeSwitch";
   import { CTA } from "../../../components/CTA";
-  import { Directions } from "../../../components/Directions";
+  import { PageNavigator } from "../../../components/PageNavigator";
   import { Projects } from "../../../components/Projects";
   
   const Project = () => {
     return (
       <Container height="100vh">
-        <Directions direction='Next'/>
+        <PageNavigator direction='Next'/>
         <Projects/>
         <DarkModeSwitch />
         <CTA />
