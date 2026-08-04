@@ -4,10 +4,10 @@ import {
 import { Link } from "./Link";
 import { useRouter } from "next/router";
 
-export const Directions = ({direction}) => {
+export const PageNavigator = ({direction}: {direction: string}) => {
   
   const router = useRouter();
-  const { id } = router.query;
+  const id = Number(router.query.id!);
 
   const next = () => {
     if (id === 5) {

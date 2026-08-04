@@ -42,6 +42,7 @@ export const Projects = () => {
   const router = useRouter();
   const id = Number(router.query.id!);
   const p: Project = projects[id];
+  const placeholderUrl: string = "https://placehold.net/400x600.png";
 
   const { colorMode } = useColorMode();
   const color: Color = {
@@ -131,10 +132,10 @@ export const Projects = () => {
             </Flex>
             </WrapItem>
             <WrapItem width='50vw' display='flex' justifyContent='center'>
-            {flag === true ? (
-              <Embed key={id} url={p.githubImage} alt={p.githubImage} />
+            {flag === true ? ( // fix: url issues below
+              <Embed key={id} url={p.githubImage ? p.githubImage : placeholderUrl} alt={p.githubImage?.toString() || "GitHub Image"} />
             ) : (
-              <Embed key={id} url={p.image} alt={p.image} />
+              <Embed key={id} url={p.image ? p.image : placeholderUrl} alt={p.image?.toString() || "Project Image"} />
             )}
             </WrapItem>
           </Wrap>
